@@ -6,4 +6,6 @@ EZE Ministro-Pistarini Ezeiza Argentina LAS Aeropuerto-Internacional-McCarran La
 LAS Aeropuerto-Internacional-McCarran Las-Vegas EEUU LAX Aeropuerto-Internacional-de-los-Angeles Los-Angeles EEUU 3000
 EZE Ministro-Pistarini Ezeiza Argentina JFK Aeropuerto-Internacional-John-F-Kennedy Nueva-York EEUU 35000
 EZE Ministro-Pistarini Ezeiza Argentina MIA Aeropuerto-Internacional-de-Miami Miami EEUU 32500
-MIA Aeropuerto-Internacional-de-Miami Miami EEUU JFK Aeropuerto-Internacional-John-F-Kennedy Nueva-York EEUU 2000
+MIA Aeropuerto-Internacional-de-Miami Miami EEUU JFK Aeropuerto-Internacional-John-F-Kennedy Nueva-York EEUU 2100
+MIA Aeropuerto-Internacional-de-Miami Miami EEUU JAX Aeropuerto-Internacional-de-Jacksonville Jacksonville EEUU 500
+JAX Aeropuerto-Internacional-de-Jacksonville Jacksonville EEUU JFK Aeropuerto-Internacional-John-F-Kennedy Nueva-York EEUU 250
