@@ -1,0 +1,9 @@
+EZE Ministro-Pistarini Ezeiza Argentina LAX Aeropuerto-Internacional-de-los-Angeles Los-Angeles EEUU 32859
+EZE Ministro-Pistarini Ezeiza Argentina FCO Aeropuerto-Internacional-de-Fiumicino Roma Italia 30277
+FCO Aeropuerto-Internacional-de-Fiumicino Roma Italia TXL Otto-Lilielenthal Berlin Alemania 9193
+EZE Ministro-Pistarini Ezeiza Argentina TXL Otto-Lilielenthal Berlin Alemania 38099
+EZE Ministro-Pistarini Ezeiza Argentina LAS Aeropuerto-Internacional-McCarran Las-Vegas EEUU 30000
+LAS Aeropuerto-Internacional-McCarran Las-Vegas EEUU LAX Aeropuerto-Internacional-de-los-Angeles Los-Angeles EEUU 3000
+EZE Ministro-Pistarini Ezeiza Argentina JFK Aeropuerto-Internacional-John-F-Kennedy Nueva-York EEUU 35000
+EZE Ministro-Pistarini Ezeiza Argentina MIA Aeropuerto-Internacional-de-Miami Miami EEUU 32500
+MIA Aeropuerto-Internacional-de-Miami Miami EEUU JFK Aeropuerto-Internacional-John-F-Kennedy Nueva-York EEUU 2000
