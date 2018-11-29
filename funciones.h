@@ -10,6 +10,7 @@ void menu();
 std::string leerDato(std::ifstream &archivo);
 void obtenerDatos(std::ifstream &archivo);
 int longitudArchivo(std::ifstream &archivo);
+int calcularAscii(std::string codigo);
 
 
 #endif /* funciones_h */

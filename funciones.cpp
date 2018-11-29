@@ -42,3 +42,10 @@ int longitudArchivo(std::ifstream &archivo){
     archivo.seekg(0);
     return longitud;
 }
+
+int calcularAscii(std::string codigo){
+    int entero = 0;
+    entero = (codigo[0]*codigo[0]*codigo[0]) + codigo[1] + codigo[2];
+    
+    return entero;
+}
