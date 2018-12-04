@@ -31,8 +31,6 @@ public:
     void InsertaArista(Vertice *origen, Vertice *destino, int peso);
     void InsertaVertice(string codigo);
     void ListaAdyacencia();
-    void EliminarArista(Vertice *origen, Vertice *destino);
-    void RecorridoAnchura(Vertice *origen);
 
 };
 
