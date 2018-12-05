@@ -18,7 +18,8 @@ std::string leerDato(std::ifstream &archivo){
     return dato;
 }
 
-void obtenerDatos(std::ifstream &archivo){
+
+Ruta* crearVuelo(std::ifstream &archivo){
     std::string codigo_p = leerDato(archivo);
     std::string aeropuerto_p = leerDato(archivo);
     std::string ciudad_p = leerDato(archivo);
@@ -29,6 +30,9 @@ void obtenerDatos(std::ifstream &archivo){
     std::string pais_d = leerDato(archivo);
     int costo = std::stod(leerDato(archivo));
     
+    Ruta* a = new Ruta(codigo_p, codigo_d, aeropuerto_p, aeropuerto_d, ciudad_p, ciudad_d, pais_p, pais_d, costo);
+    
+    return a;
 }
 
 int longitudArchivo(std::ifstream &archivo){
@@ -45,7 +49,31 @@ int longitudArchivo(std::ifstream &archivo){
 
 int calcularAscii(std::string codigo){
     int entero = 0;
-    entero = (codigo[0]*codigo[0]*codigo[0]) + codigo[1] + codigo[2];
+    entero = (codigo[0]*codigo[0]) + codigo[1] + codigo[2];
     
     return entero;
+}
+
+int mostrarDatos(string codigo, Ruta* rutas[], int longitud){
+    
+    for (int i = 0; i < longitud; i++) {
+        
+        if (codigo == (rutas[i]->obtenerCp())) {
+            cout << "Codigo IATA: " << codigo << endl;
+            cout << "Nombre: " << rutas[i]->obtenerNp() << endl;
+            cout << "Ciudad: " << rutas[i]->obtenerCip() << endl;
+            cout << "Pais: " << rutas[i]->obtenerPp() << endl;
+            
+            return 0;
+        }
+        else if (codigo == (rutas[i]->obtenerCl())){
+            cout << "Codigo IATA: " << codigo << endl;
+            cout << "Nombre: " << rutas[i]->obtenerNl() << endl;
+            cout << "Ciudad: " << rutas[i]->obtenerCil() << endl;
+            cout << "Pais: " << rutas[i]->obtenerPl() << endl;
+            
+            return 0;
+        }
+    }
+    return 0;
 }
