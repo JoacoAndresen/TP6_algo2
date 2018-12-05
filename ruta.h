@@ -20,19 +20,59 @@ private:
     
     
 public:
+    // Constructores
+    // PRE: Datos validos
+    // POST: Crea el objeto Ruta
     Ruta(string cp, string cl, string np, string nl, string cip, string cil, string pp, string pl, int cos);
+    
+    // PRE: -
+    // POST: Crea el objeto Ruta vacio
     Ruta();
     
+    // Metodos
+    
+    // PRE: -
+    // POST: Devuelve el codigo de partida
     string obtenerCp();
+    
+    // PRE: -
+    // POST: Devuelve el codigo del destino
     string obtenerCl();
+    
+    // PRE: -
+    // POST: Devuelve el nombre del aeropuerto de partida
     string obtenerNp();
+    
+    // PRE: -
+    // POST: Devuelve el nombre del aeropuerto destino
     string obtenerNl();
+    
+    // PRE: -
+    // POST: Devuelve la ciudad de partida
     string obtenerCip();
+    
+    // PRE: -
+    // POST: Devuelve la ciudad destino
     string obtenerCil();
+    
+    // PRE: -
+    // POST: Devuelve el pais de partida
     string obtenerPp();
+    
+    // PRE: -
+    // POST: Devuelve el pais destino
     string obtenerPl();
+    
+    // PRE: -
+    // POST: Devuelve el costo
     int obtenerCos();
+    
+    // PRE: -
+    // POST: Devuelve el ascii de partida
     int obtenerAscii_p();
+    
+    // PRE: -
+    // POST: Devuelve el ascii destino
     int obtenerAscii_l();
     
 };

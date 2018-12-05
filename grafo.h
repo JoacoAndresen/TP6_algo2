@@ -12,20 +12,20 @@ using namespace std;
 
 class Graph
 {
-    int V;    // No. of vertices'
+    int V;    // Numero de vertices
     
-    // Pointer to an array containing adjacency lists
+    // Puntero a un arreglo de listas adyacentes
     list<AdjListNode> *adj;
     
-    // A function used by shortestPath
+    // Función Utilizada por shortestPath
     void topologicalSortUtil(int v, bool visited[], stack<int> &Stack);
 public:
     Graph(int V);   // Constructor
     
-    // function to add an edge to graph
+    // Funcion que agrega un vector
     void addEdge(int u, int v, int weight);
     
-    // Finds shortest paths from given source vertex
+    // Encuentra el camino más corto
     int shortestPath(int s, int d);
     
 };
