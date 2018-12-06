@@ -1,38 +1,25 @@
-#ifndef NODO.H
-#define NODO.H
-#include <iostream>
-#include <string>
-#include "funciones.h"
-using namespace std;
+#ifndef NODO_H
+#define NODO_H
 
-class Nodo{
-    // atributos
+class NodoListaAdj{
 private:
-    std::string codigo_p;
-    std::string aeropuerto_p;
-    std::string ciudad_p;
-    std::string pais_p;
-    std::string codigo_d;
-    std::string aeropuerto_d;
-    std::string ciudad_d;
-    std::string pais_d;
+    int v;
     int costo;
 public:
-    // Constructor con parametros
-    Nodo(std::ifstream &archivo);
+    // Constructor
+    // PRE: Recibe datos validos
+    // POST: Crea el objeto NodoListaAdj
+    NodoListaAdj(int _v, int _c);
 
-    // Obtener codigo_p
+    // Metodos
+
+    // PRE:-
+    // POST: Devuelve v(codigo ascii del aeropuerto).
+    int obtenerV();
+
     // PRE: -
-    // POST: Devuelve el codigo del aeropuerto de procedencia
-    std::string obtenerCodigo_p();
-
+    // POST: Devuelve el costo del viaje.
+    int obtenerCosto();
 };
-
-
-
-
-
-
-
 
 #endif // NODO

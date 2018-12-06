@@ -1,47 +1,56 @@
-#include <iostream>
-#include "grafo.h"
 #include "funciones.h"
-#include "nodo.h"
 
 using namespace std;
 
-int main()
-{
-    Grafo G;
+int main(){
+    //Se crea el grafo
+    Grafo g(9999);
 
-    G.Inicializa();
-
-    G.InsertaVertice("EZE");
-    G.InsertaVertice("LAX");
-    G.InsertaVertice("JKF");
-    G.InsertaVertice("DXB");
-    G.InsertaVertice("DOH");
-    G.InsertaVertice("JDP");
-
-    G.InsertaArista(G.GetVertice("EZE"), G.GetVertice("LAX"), 900);
-    G.InsertaArista(G.GetVertice("LAX"), G.GetVertice("EZE"), 1350);
-    G.InsertaArista(G.GetVertice("DXB"), G.GetVertice("EZE"), 600);
-    G.InsertaArista(G.GetVertice("JKF"), G.GetVertice("EZE"), 500);
-    G.InsertaArista(G.GetVertice("LAX"), G.GetVertice("JDP"), 50);
-    G.InsertaArista(G.GetVertice("DXB"), G.GetVertice("DOH"), 700);
-    G.InsertaArista(G.GetVertice("LAX"), G.GetVertice("DXB"), 5400);
-
-    G.ListaAdyacencia();
-
-    // G.RecorridoAnchura(G.GetVertice("DXB"));
-
-    // menu();
-
-    /*
-
+    // Se abre el archivo
     std::ifstream archivo;
     archivo.open("vuelos.txt");
-    obtenerCodigo_p(archivo);
-    archivo.close();
 
-    */
+    // Longitud del archivo (lineas)
+    int longitud = longitudArchivo(archivo) - 1;
 
-    return 0;
+    // Array de punteros a rutas
+    Ruta* rutas[longitud];
+
+    // Se llena la lista de punteros 'rutas'
+    for (int i = 0; i < longitud; i++) {
+        Ruta* a = crearVuelo(archivo);
+
+        rutas[i] = a;
+
+        g.addEdge(a->obtenerAscii_p(), a->obtenerAscii_l(), a->obtenerCos());
+    }
+
+    string partida;
+    string destino;
+
+    cout << "Ingrese el codigo IATA de partida: ";
+    cin >> partida;
+    cout << "Ingrese el codigo IATA del destino: ";
+    cin >> destino;
+
+    cout << endl;
+
+    if(g.caminoMasCorto(calcularAscii(partida), calcularAscii(destino)) > 99999){
+        cout << "La ruta solicitada no esta conectada." << endl;
+    }
+    else{
+        cout << "La ruta mas economica es: " << endl;
+        cout << endl;
+        cout << "Partida: " << endl;
+        mostrarDatos(partida, rutas, longitud);
+        cout << endl;
+        cout << "Destino: " << endl;
+        mostrarDatos(destino, rutas, longitud);
+        cout << endl;
+        cout << "El costo más bajo de " << partida << " a " << destino << " es: " << g.caminoMasCorto(calcularAscii(partida), calcularAscii(destino)) << endl;
+
+        archivo.close();
+
+        return 0;
+    }
 }
-
-
